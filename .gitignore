@@ -1,0 +1,5 @@
+# macOS
+.DS_Store
+
+# Compass / Sass
+.sass-cache/

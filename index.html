@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<!--[if lt IE 9 ]>             <html lang="fr" class="ie-old"> <![endif]-->
+<!--[if IE 9 ]>                <html lang="fr" class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="fr" class=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Le jeu de l'eau</title>
+
+        <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="lib/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" />
+        <link href="css/stylesheets/screen.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="wrapper"></div>
+
+        <div id="pas-la">
+            <div id="accueil" class="container-fluid">
+                <div class="row">
+                    <div id="accueil-titre"></div>
+                </div>
+                <div class="accueil-contenu"></div>
+            </div>
+
+            <div id="bienvenue">
+                <div class="row">
+                    <div class="accueil-message">
+                        <h2>Bienvenue&nbsp;!</h2>
+                        <p>Avec le jeu de l’eau, tu vas découvrir le cycle de l’eau, les différents métiers qui existent autour de l’eau et des gestes simples à mettre en place pour éviter de gaspiller et de polluer l’eau.</p>
+                        <p>Pour commencer, clique sur le bouton <strong>«&nbsp;suivant »</strong>.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 col-md-offset-8">
+                        <a id="bienvenue-suivant" class="suivant pull-right" href="#"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="chargement">
+                <div id="progression">
+                    Chargement… <span id="fichiers">0</span>&nbsp;%
+                </div>
+                <div id="jouer">
+                    <a href="#">Jouer</a>
+                </div>
+            </div>
+
+            <div id="felicitations">
+                <div class="row">
+                    <div class="accueil-message">
+                        <h2>Félicitations&nbsp;!</h2>
+                        <p style="text-align: center;">
+                            <strong>Tu as terminé le jeu de l’eau.</strong><br />
+                            Tu connais maintenant tout sur l’eau&nbsp;!
+                        </p>
+                        <p style="text-align: center;">
+                            <strong>Télécharge ton diplôme d’expert</strong><br />
+                            en cliquant sur le bouton ci-dessous.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <a id="telecharger-diplome" href="pdf/diplome.pdf" target="_blank"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="jeu container-fluid">
+                <div id="jeu-titre">
+                    <div id="titre" class="pull-left"></div>
+                    <div id="sous-titre" class="pull-right"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="#" class="jcarousel-control-prev"></a>
+                        <div id="vignettes" class="jcarousel-wrapper">
+                            <div class="jcarousel">
+                                <ul>
+                                    <li><div id="vignette01" class="vignette vignette01 draggable"></div></li><!--
+                                    --><li><div id="vignette02" class="vignette vignette02 draggable"></div></li><!--
+                                    --><li><div id="vignette03" class="vignette vignette03 draggable"></div></li><!--
+                                    --><li><div id="vignette04" class="vignette vignette04 draggable"></div></li><!--
+                                    --><li><div id="vignette05" class="vignette vignette05 draggable"></div></li><!--
+                                    --><li><div id="vignette06" class="vignette vignette06 draggable"></div></li><!--
+                                    --><li><div id="vignette07" class="vignette vignette07 draggable"></div></li><!--
+                                    --><li><div id="vignette08" class="vignette vignette08 draggable"></div></li><!--
+                                    --><li><div id="vignette09" class="vignette vignette09 draggable"></div></li><!--
+                                    --><li><div id="vignette10" class="vignette vignette10 draggable"></div></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="#" class="jcarousel-control-next"></a>
+                    </div>
+                    <div class="col-md-9">
+                        <div id="plateau">
+                            <div class="illustration">
+                                <div id="emplacement01" class="emplacement droppable" data-vignette="#vignette01"></div>
+                                <div id="emplacement02" class="emplacement droppable" data-vignette="#vignette02"></div>
+                                <div id="emplacement03" class="emplacement droppable" data-vignette="#vignette03"></div>
+                                <div id="emplacement04" class="emplacement droppable" data-vignette="#vignette04"></div>
+                                <div id="emplacement05" class="emplacement droppable" data-vignette="#vignette05"></div>
+                                <div id="emplacement06" class="emplacement droppable" data-vignette="#vignette06"></div>
+                                <div id="emplacement07" class="emplacement droppable" data-vignette="#vignette07"></div>
+                                <div id="emplacement08" class="emplacement droppable" data-vignette="#vignette08"></div>
+                                <div id="emplacement09" class="emplacement droppable" data-vignette="#vignette09"></div>
+                                <div id="emplacement10" class="emplacement droppable" data-vignette="#vignette10"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <a href="#" id="retour"></a>
+                            </div>
+                            <div class="col-xs-4">
+                                <div id="zoom">
+                                    <a href="#" id="plus"></a><a href="#" id="moins"></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <a href="#" id="aide" class="pull-right"></a>
+                                <a href="#" id="son" class="pull-right"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal-bravo" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-conteneur">
+                        <h2 class="modal-titre"></h2>
+                        <div class="modal-contenu"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 col-md-offset-10">
+                            <a href="#" class="suivant pull-right"></a>
+                        </div>
+                    </div>
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
+            <div id="modal-faux" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-conteneur">
+                        <h2 class="modal-titre"></h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 col-md-offset-10">
+                            <a href="#" class="suivant pull-right"></a>
+                        </div>
+                    </div>
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
+            <div id="modal-aide" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-conteneur">
+                        <h2 class="modal-titre"></h2>
+                        <div class="modal-contenu"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 col-md-offset-10">
+                            <a href="#" class="suivant pull-right"></a>
+                        </div>
+                    </div>
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
+            <div id="themes">
+                <div class="row">
+                    <div class="accueil-message">
+                        <h2></h2>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="hidden">
+                        <a id="theme-cycle-eau" class="theme" data-theme="cycle-eau" href="#"></a>
+                    </div>
+                    <div class="hidden">
+                        <a id="theme-bons-gestes" class="theme" data-theme="bons-gestes" href="#"></a>
+                    </div>
+                    <div class="hidden">
+                        <a id="theme-metiers" class="theme" data-theme="metiers" href="#"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="lib/jquery/jquery.min.js"></script>
+        <script src="lib/jquery-ui/jquery-ui.min.js"></script>
+        <script src="lib/jquery-ui-touch-punch/jquery-ui-touch-punch.js"></script>
+        <script src="lib/jquery-dragscrollable/dragscrollable.js"></script>
+        <script src="lib/jcarousel/jquery.jcarousel.min.js"></script>
+        <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+        <script src="lib/createjs/preloadjs/preloadjs-0.4.1.min.js"></script>
+        <script src="lib/createjs/soundjs/soundjs-0.5.2.min.js"></script>
+        <script src="lib/modernizr/modernizr.min.js"></script>
+        <script src="js/script.min.js"></script>
+    </body>
+</html>

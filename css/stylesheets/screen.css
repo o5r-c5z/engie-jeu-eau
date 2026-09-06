@@ -1,0 +1,891 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, ../../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+@-moz-keyframes clignote {
+  /* line 15, ../sass/screen.scss */
+  0% {
+    opacity: 0.5;
+  }
+
+  /* line 18, ../sass/screen.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes clignote {
+  /* line 15, ../sass/screen.scss */
+  0% {
+    opacity: 0.5;
+  }
+
+  /* line 18, ../sass/screen.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes clignote {
+  /* line 15, ../sass/screen.scss */
+  0% {
+    opacity: 0.5;
+  }
+
+  /* line 18, ../sass/screen.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes clignote {
+  /* line 15, ../sass/screen.scss */
+  0% {
+    opacity: 0.5;
+  }
+
+  /* line 18, ../sass/screen.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes clignote {
+  /* line 15, ../sass/screen.scss */
+  0% {
+    opacity: 0.5;
+  }
+
+  /* line 18, ../sass/screen.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@font-face {
+  font-family: "SansaPro";
+  src: url('../../fonts/');
+  src: url('../../fonts/?#iefix') format('eot'), url('../../fonts/SansaPro/SansaPro-SemiBold.otf') format('opentype');
+  font-weight: 700;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: "Vectora";
+  src: url('../../fonts/');
+  src: url('../../fonts/?#iefix') format('eot'), url('../../fonts/Vectora/VectoraLTStd-Roman.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Vectora";
+  src: url('../../fonts/');
+  src: url('../../fonts/?#iefix') format('eot'), url('../../fonts/Vectora/VectoraLTStd-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: bold;
+}
+
+/* line 53, ../sass/screen.scss */
+strong {
+  font-weight: bold;
+}
+
+/* line 57, ../sass/screen.scss */
+h2 {
+  text-align: center;
+  font-family: 'SansaPro', 'Vectora', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 40px;
+  color: #0bb3e0;
+  margin-bottom: 10px;
+}
+
+/* line 65, ../sass/screen.scss */
+p {
+  margin-bottom: 10px;
+}
+
+/* line 69, ../sass/screen.scss */
+#plateau {
+  width: 100%;
+  overflow: hidden;
+  border: solid 10px #09b3e0;
+}
+/* line 74, ../sass/screen.scss */
+#plateau .illustration {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* line 79, ../sass/screen.scss */
+#plateau .illustration .emplacement {
+  position: absolute;
+  overflow: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* line 85, ../sass/screen.scss */
+#plateau .illustration .emplacement .vignette {
+  height: 100%;
+  width: 100%;
+}
+
+/* line 94, ../sass/screen.scss */
+#cycle-eau #sous-titre {
+  background-image: url('../../img/cycle-eau/le-cycle-de-l-eau.png?1431634423');
+}
+/* line 98, ../sass/screen.scss */
+#cycle-eau #plateau {
+  border-color: #fdc400;
+}
+/* line 101, ../sass/screen.scss */
+#cycle-eau #plateau .illustration {
+  background-image: url('../../img/cycle-eau/cycle-eau-00.jpg?1431634414');
+}
+/* line 107, ../sass/screen.scss */
+#cycle-eau .vignette.vignette01 {
+  background-image: url('../../img/cycle-eau/cycle-eau-01.jpg?1431634415');
+}
+/* line 110, ../sass/screen.scss */
+#cycle-eau .vignette.vignette02 {
+  background-image: url('../../img/cycle-eau/cycle-eau-02.jpg?1431634416');
+}
+/* line 113, ../sass/screen.scss */
+#cycle-eau .vignette.vignette03 {
+  background-image: url('../../img/cycle-eau/cycle-eau-03.jpg?1431634416');
+}
+/* line 116, ../sass/screen.scss */
+#cycle-eau .vignette.vignette04 {
+  background-image: url('../../img/cycle-eau/cycle-eau-04.jpg?1431634417');
+}
+/* line 119, ../sass/screen.scss */
+#cycle-eau .vignette.vignette05 {
+  background-image: url('../../img/cycle-eau/cycle-eau-05.jpg?1431634418');
+}
+/* line 122, ../sass/screen.scss */
+#cycle-eau .vignette.vignette06 {
+  background-image: url('../../img/cycle-eau/cycle-eau-06.jpg?1431634419');
+}
+/* line 125, ../sass/screen.scss */
+#cycle-eau .vignette.vignette07 {
+  background-image: url('../../img/cycle-eau/cycle-eau-07.jpg?1431634420');
+}
+/* line 128, ../sass/screen.scss */
+#cycle-eau .vignette.vignette08 {
+  background-image: url('../../img/cycle-eau/cycle-eau-08.jpg?1431634420');
+}
+/* line 131, ../sass/screen.scss */
+#cycle-eau .vignette.vignette09 {
+  background-image: url('../../img/cycle-eau/cycle-eau-09.jpg?1431634421');
+}
+/* line 134, ../sass/screen.scss */
+#cycle-eau .vignette.vignette10 {
+  background-image: url('../../img/cycle-eau/cycle-eau-10.jpg?1431634422');
+}
+/* line 139, ../sass/screen.scss */
+#cycle-eau #zoom {
+  background-image: url('../../img/cycle-eau/zoom-fond.png?1431634423');
+}
+
+/* line 145, ../sass/screen.scss */
+#bons-gestes #sous-titre {
+  background-image: url('../../img/bons-gestes/les-bons-gestes.png?1431634378');
+}
+/* line 149, ../sass/screen.scss */
+#bons-gestes #plateau {
+  border-color: #75b31f;
+}
+/* line 152, ../sass/screen.scss */
+#bons-gestes #plateau .illustration {
+  background-image: url('../../img/bons-gestes/bons-gestes-00.jpg?1431635169');
+}
+/* line 158, ../sass/screen.scss */
+#bons-gestes .vignette.vignette01 {
+  background-image: url('../../img/bons-gestes/bons-gestes-01.jpg?1431634370');
+}
+/* line 161, ../sass/screen.scss */
+#bons-gestes .vignette.vignette02 {
+  background-image: url('../../img/bons-gestes/bons-gestes-02.jpg?1431634371');
+}
+/* line 164, ../sass/screen.scss */
+#bons-gestes .vignette.vignette03 {
+  background-image: url('../../img/bons-gestes/bons-gestes-03.jpg?1431634372');
+}
+/* line 167, ../sass/screen.scss */
+#bons-gestes .vignette.vignette04 {
+  background-image: url('../../img/bons-gestes/bons-gestes-04.jpg?1431634372');
+}
+/* line 170, ../sass/screen.scss */
+#bons-gestes .vignette.vignette05 {
+  background-image: url('../../img/bons-gestes/bons-gestes-05.jpg?1431634373');
+}
+/* line 173, ../sass/screen.scss */
+#bons-gestes .vignette.vignette06 {
+  background-image: url('../../img/bons-gestes/bons-gestes-06.jpg?1431634374');
+}
+/* line 176, ../sass/screen.scss */
+#bons-gestes .vignette.vignette07 {
+  background-image: url('../../img/bons-gestes/bons-gestes-07.jpg?1431634375');
+}
+/* line 179, ../sass/screen.scss */
+#bons-gestes .vignette.vignette08 {
+  background-image: url('../../img/bons-gestes/bons-gestes-08.jpg?1431634375');
+}
+/* line 182, ../sass/screen.scss */
+#bons-gestes .vignette.vignette09 {
+  background-image: url('../../img/bons-gestes/bons-gestes-09.jpg?1431634376');
+}
+/* line 185, ../sass/screen.scss */
+#bons-gestes .vignette.vignette10 {
+  background-image: url('../../img/bons-gestes/bons-gestes-10.jpg?1431634377');
+}
+/* line 190, ../sass/screen.scss */
+#bons-gestes #zoom {
+  background-image: url('../../img/bons-gestes/zoom-fond.png?1431634378');
+}
+
+/* line 196, ../sass/screen.scss */
+#metiers #sous-titre {
+  background-image: url('../../img/metiers/les-metiers-autour-de-l-eau.png?1431634426');
+}
+/* line 200, ../sass/screen.scss */
+#metiers #plateau {
+  border-color: #65c5dd;
+}
+/* line 203, ../sass/screen.scss */
+#metiers #plateau .illustration {
+  background-image: url('../../img/metiers/metiers-00.jpg?1431634467');
+}
+/* line 209, ../sass/screen.scss */
+#metiers .vignette.vignette01 {
+  background-image: url('../../img/metiers/metiers-01.jpg?1431634468');
+}
+/* line 212, ../sass/screen.scss */
+#metiers .vignette.vignette02 {
+  background-image: url('../../img/metiers/metiers-02.jpg?1431634469');
+}
+/* line 215, ../sass/screen.scss */
+#metiers .vignette.vignette03 {
+  background-image: url('../../img/metiers/metiers-03.jpg?1431634470');
+}
+/* line 218, ../sass/screen.scss */
+#metiers .vignette.vignette04 {
+  background-image: url('../../img/metiers/metiers-04.jpg?1431634471');
+}
+/* line 221, ../sass/screen.scss */
+#metiers .vignette.vignette05 {
+  background-image: url('../../img/metiers/metiers-05.jpg?1431634471');
+}
+/* line 224, ../sass/screen.scss */
+#metiers .vignette.vignette06 {
+  background-image: url('../../img/metiers/metiers-06.jpg?1431634475');
+}
+/* line 227, ../sass/screen.scss */
+#metiers .vignette.vignette07 {
+  background-image: url('../../img/metiers/metiers-07.jpg?1431634476');
+}
+/* line 230, ../sass/screen.scss */
+#metiers .vignette.vignette08 {
+  background-image: url('../../img/metiers/metiers-08.jpg?1431634476');
+}
+/* line 233, ../sass/screen.scss */
+#metiers .vignette.vignette09 {
+  background-image: url('../../img/metiers/metiers-09.jpg?1431634477');
+}
+/* line 236, ../sass/screen.scss */
+#metiers .vignette.vignette10 {
+  background-image: url('../../img/metiers/metiers-10.jpg?1431634478');
+}
+/* line 241, ../sass/screen.scss */
+#metiers #zoom {
+  background-image: url('../../img/metiers/zoom-fond.png?1431634479');
+}
+
+/* line 246, ../sass/screen.scss */
+.suivant {
+  display: block;
+  height: 100px;
+  width: 130px;
+  background-image: url('../../img/ui/suivant.png?1431634488');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* line 256, ../sass/screen.scss */
+#modal-bravo .modal-conteneur {
+  height: 262px;
+  width: 650px;
+  background-image: url('../../img/ui/bravo.png?1431634483');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 80px 50px 25px 150px;
+}
+
+/* line 267, ../sass/screen.scss */
+#modal-faux .modal-conteneur {
+  height: 211px;
+  width: 650px;
+  background-image: url('../../img/ui/faux.png?1431634484');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 60px 50px 25px 125px;
+}
+
+/* line 278, ../sass/screen.scss */
+#modal-aide .modal-conteneur {
+  height: 257px;
+  width: 650px;
+  background-image: url('../../img/ui/aide.png?1431634482');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px 100px 25px 150px;
+}
+
+/* line 289, ../sass/screen.scss */
+html {
+  height: 100%;
+}
+/* line 292, ../sass/screen.scss */
+html body {
+  height: 100%;
+  margin: 0;
+  background-color: #c8e9f8;
+  background-image: url('../../img/ui/degrade.jpg?1431676532');
+  background-repeat: repeat-x;
+  backgroud-size: cover;
+  background-attachment: fixed;
+  font-family: 'Vectora', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  /*********** PRELOAD ***********/
+}
+/* line 303, ../sass/screen.scss */
+html body:after {
+  display: none;
+  content: url('../../img/accueil/accueil-fond.jpg?1431635118') url('../../img/accueil/accueil.png?1431635120') url('../../img/accueil/themes-sprite.png?1431635125') url('../../img/accueil/telecharger-sprite.png?1431635121') url('../../img/accueil/titre.png?1431635127') url('../../img/bons-gestes/bons-gestes-00.jpg?1431635169') url('../../img/bons-gestes/bons-gestes-01.jpg?1431634370') url('../../img/bons-gestes/bons-gestes-02.jpg?1431634371') url('../../img/bons-gestes/bons-gestes-03.jpg?1431634372') url('../../img/bons-gestes/bons-gestes-04.jpg?1431634372') url('../../img/bons-gestes/bons-gestes-05.jpg?1431634373') url('../../img/bons-gestes/bons-gestes-06.jpg?1431634374') url('../../img/bons-gestes/bons-gestes-07.jpg?1431634375') url('../../img/bons-gestes/bons-gestes-08.jpg?1431634375') url('../../img/bons-gestes/bons-gestes-09.jpg?1431634376') url('../../img/bons-gestes/bons-gestes-10.jpg?1431634377') url('../../img/bons-gestes/les-bons-gestes.png?1431634378') url('../../img/bons-gestes/zoom-fond.png?1431634378') url('../../img/cycle-eau/cycle-eau-00.jpg?1431634414') url('../../img/cycle-eau/cycle-eau-01.jpg?1431634415') url('../../img/cycle-eau/cycle-eau-02.jpg?1431634416') url('../../img/cycle-eau/cycle-eau-03.jpg?1431634416') url('../../img/cycle-eau/cycle-eau-04.jpg?1431634417') url('../../img/cycle-eau/cycle-eau-05.jpg?1431634418') url('../../img/cycle-eau/cycle-eau-06.jpg?1431634419') url('../../img/cycle-eau/cycle-eau-07.jpg?1431634420') url('../../img/cycle-eau/cycle-eau-08.jpg?1431634420') url('../../img/cycle-eau/cycle-eau-09.jpg?1431634421') url('../../img/cycle-eau/cycle-eau-10.jpg?1431634422') url('../../img/cycle-eau/le-cycle-de-l-eau.png?1431634423') url('../../img/cycle-eau/zoom-fond.png?1431634423') url('../../img/metiers/metiers-00.jpg?1431634467') url('../../img/metiers/metiers-01.jpg?1431634468') url('../../img/metiers/metiers-02.jpg?1431634469') url('../../img/metiers/metiers-03.jpg?1431634470') url('../../img/metiers/metiers-04.jpg?1431634471') url('../../img/metiers/metiers-05.jpg?1431634471') url('../../img/metiers/metiers-06.jpg?1431634475') url('../../img/metiers/metiers-07.jpg?1431634476') url('../../img/metiers/metiers-08.jpg?1431634476') url('../../img/metiers/metiers-09.jpg?1431634477') url('../../img/metiers/metiers-10.jpg?1431634478') url('../../img/metiers/les-metiers-autour-de-l-eau.png?1431634426') url('../../img/metiers/zoom-fond.png?1431634479') url('../../img/ui/aide-sprite.png?1431634480') url('../../img/ui/aide.png?1431634482') url('../../img/ui/haut-bas-sprite.png?1431634485') url('../../img/ui/gauche-droite-sprite.png?1431634485') url('../../img/ui/zoom-sprite.png?1431634489') url('../../img/ui/son-sprite.png?1431634487') url('../../img/ui/retour.png?1431634487') url('../../img/ui/suivant.png?1431634488') url('../../img/ui/bravo.png?1431634483') url('../../img/ui/faux.png?1431634484') url('../../img/ui/fond-vignette.png?1431634484') url('../../img/ui/le-jeu-de-l-eau.png?1431634486');
+}
+/* line 363, ../sass/screen.scss */
+html body #pas-la {
+  display: none;
+}
+/* line 367, ../sass/screen.scss */
+html body #wrapper {
+  height: 100%;
+  margin: 0;
+}
+/* line 371, ../sass/screen.scss */
+html body #wrapper #non-compatible {
+  margin-top: 100px;
+  text-align: center;
+  font-family: 'SansaPro', 'Vectora', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  color: #0bb3e0;
+}
+/* line 380, ../sass/screen.scss */
+html body #wrapper #chargement #progression {
+  margin-top: 200px;
+  text-align: center;
+  font-family: 'SansaPro', 'Vectora', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 40px;
+  color: #0bb3e0;
+}
+/* line 388, ../sass/screen.scss */
+html body #wrapper #chargement #jouer {
+  margin-top: 200px;
+  text-align: center;
+  font-family: 'SansaPro', 'Vectora', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 40px;
+  color: #0bb3e0;
+  opacity: 0;
+}
+/* line 396, ../sass/screen.scss */
+html body #wrapper #chargement #jouer a {
+  text-decoration: none;
+}
+/* line 399, ../sass/screen.scss */
+html body #wrapper #chargement #jouer a:hover {
+  text-decoration: none;
+}
+/* line 406, ../sass/screen.scss */
+html body #wrapper #accueil {
+  min-height: 100%;
+  margin: 0;
+  background-image: url('../../img/accueil/accueil-fond.jpg?1431635118');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+/* line 413, ../sass/screen.scss */
+html body #wrapper #accueil #accueil-titre {
+  height: 164px;
+  width: 690px;
+  margin: 0 auto;
+  background-image: url('../../img/accueil/titre.png?1431635127');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* line 422, ../sass/screen.scss */
+html body #wrapper #accueil .accueil-message {
+  height: 235px;
+  width: 650px;
+  margin: 0 auto;
+  padding: 50px 150px 25px;
+  background-image: url('../../img/accueil/accueil.png?1431635120');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* line 432, ../sass/screen.scss */
+html body #wrapper #accueil #bienvenue {
+  position: relative;
+}
+/* line 436, ../sass/screen.scss */
+html body #wrapper #accueil #felicitations {
+  position: relative;
+}
+/* line 439, ../sass/screen.scss */
+html body #wrapper #accueil #felicitations #telecharger-diplome {
+  display: block;
+  height: 159px;
+  width: 524px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-image: url('../../img/accueil/telecharger-sprite.png?1431635121');
+  background-position: 0px 0px;
+}
+/* line 448, ../sass/screen.scss */
+html body #wrapper #accueil #felicitations #telecharger-diplome:hover {
+  background-image: url('../../img/accueil/telecharger-sprite.png?1431635121');
+  background-position: -524px 0px;
+}
+/* line 455, ../sass/screen.scss */
+html body #wrapper #accueil #themes {
+  position: relative;
+}
+/* line 458, ../sass/screen.scss */
+html body #wrapper #accueil #themes .theme {
+  display: block;
+  height: 290px;
+  width: 259px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+}
+/* line 466, ../sass/screen.scss */
+html body #wrapper #accueil #themes #theme-cycle-eau {
+  background-image: url('../../img/accueil/themes-sprite.png?1431635125');
+  background-position: 0px 0px;
+}
+/* line 470, ../sass/screen.scss */
+html body #wrapper #accueil #themes #theme-cycle-eau:hover {
+  background-image: url('../../img/accueil/themes-sprite.png?1431635125');
+  background-position: -259px 0px;
+}
+/* line 476, ../sass/screen.scss */
+html body #wrapper #accueil #themes #theme-bons-gestes {
+  background-image: url('../../img/accueil/themes-sprite.png?1431635125');
+  background-position: -518px 0px;
+}
+/* line 480, ../sass/screen.scss */
+html body #wrapper #accueil #themes #theme-bons-gestes:hover {
+  background-image: url('../../img/accueil/themes-sprite.png?1431635125');
+  background-position: -777px 0px;
+}
+/* line 486, ../sass/screen.scss */
+html body #wrapper #accueil #themes #theme-metiers {
+  background-image: url('../../img/accueil/themes-sprite.png?1431635125');
+  background-position: -1036px 0px;
+}
+/* line 490, ../sass/screen.scss */
+html body #wrapper #accueil #themes #theme-metiers:hover {
+  background-image: url('../../img/accueil/themes-sprite.png?1431635125');
+  background-position: -1295px 0px;
+}
+/* line 499, ../sass/screen.scss */
+html body #wrapper .jeu .vignette {
+  height: 170px;
+  /* 222px; */
+  width: 170px;
+  /* 222px; */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* line 506, ../sass/screen.scss */
+html body #wrapper .jeu #jeu-titre {
+  height: 169px;
+}
+/* line 509, ../sass/screen.scss */
+html body #wrapper .jeu #jeu-titre #titre {
+  height: 100%;
+  width: 50%;
+  background-position: left center;
+  background-size: 75%;
+  background-repeat: no-repeat;
+  background-image: url('../../img/ui/le-jeu-de-l-eau.png?1431634486');
+}
+/* line 518, ../sass/screen.scss */
+html body #wrapper .jeu #jeu-titre #sous-titre {
+  height: 100%;
+  width: 50%;
+  background-position: right center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 992px) {
+  /* line 529, ../sass/screen.scss */
+  html body #wrapper #vignettes {
+    width: 170px;
+    /* 222px; */
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  /* line 534, ../sass/screen.scss */
+  html body #wrapper #vignettes .jcarousel {
+    height: 350px;
+    width: 170px;
+    /* 222px; */
+  }
+  /* line 538, ../sass/screen.scss */
+  html body #wrapper #vignettes .jcarousel ul {
+    position: relative;
+    overflow-y: hidden;
+  }
+  /* line 542, ../sass/screen.scss */
+  html body #wrapper #vignettes .jcarousel ul li {
+    position: relative;
+    height: 170px;
+    /* 222px; */
+    width: 170px;
+    /* 222px; */
+    margin: 0 0 10px;
+    background-image: url('../../img/ui/fond-vignette.png?1431634484');
+  }
+  /* line 553, ../sass/screen.scss */
+  html body #wrapper .jcarousel-control-prev {
+    z-index: 999;
+    display: block;
+    height: 39px;
+    width: 75px;
+    margin: 0 auto 10px;
+    background-image: url('../../img/ui/haut-bas-sprite.png?1431634485');
+    background-position: 0px 0px;
+    -webkit-animation: clignote 0.5s ease-in-out infinite alternate;
+    -moz-animation: clignote 0.5s ease-in-out infinite alternate;
+    -ms-animation: clignote 0.5s ease-in-out infinite alternate;
+    -o-animation: clignote 0.5s ease-in-out infinite alternate;
+    animation: clignote 0.5s ease-in-out infinite alternate;
+  }
+  /* line 563, ../sass/screen.scss */
+  html body #wrapper .jcarousel-control-prev:hover {
+    background-image: url('../../img/ui/haut-bas-sprite.png?1431634485');
+    background-position: -75px 0px;
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -ms-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+    opacity: 1;
+  }
+  /* line 570, ../sass/screen.scss */
+  html body #wrapper .jcarousel-control-prev.invisible {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -ms-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+    opacity: 0;
+  }
+  /* line 576, ../sass/screen.scss */
+  html body #wrapper .jcarousel-control-next {
+    z-index: 999;
+    display: block;
+    height: 39px;
+    width: 75px;
+    margin: 10px auto 0;
+    background-image: url('../../img/ui/haut-bas-sprite.png?1431634485');
+    background-position: -150px 0px;
+    -webkit-animation: clignote 0.5s ease-in-out infinite alternate;
+    -moz-animation: clignote 0.5s ease-in-out infinite alternate;
+    -ms-animation: clignote 0.5s ease-in-out infinite alternate;
+    -o-animation: clignote 0.5s ease-in-out infinite alternate;
+    animation: clignote 0.5s ease-in-out infinite alternate;
+  }
+  /* line 586, ../sass/screen.scss */
+  html body #wrapper .jcarousel-control-next:hover {
+    background-image: url('../../img/ui/haut-bas-sprite.png?1431634485');
+    background-position: -225px 0px;
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -ms-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+    opacity: 1;
+  }
+  /* line 593, ../sass/screen.scss */
+  html body #wrapper .jcarousel-control-next.invisible {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -ms-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+    opacity: 0;
+  }
+}
+@media screen and (max-width: 992px) {
+  /* line 600, ../sass/screen.scss */
+  html body #wrapper #vignettes {
+    position: relative;
+    height: 170px;
+    /* 222px; */
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  /* line 606, ../sass/screen.scss */
+  html body #wrapper #vignettes .jcarousel {
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+  /* line 611, ../sass/screen.scss */
+  html body #wrapper #vignettes .jcarousel ul {
+    position: relative;
+    width: 30000em;
+    padding-left: 0;
+    list-style: none;
+    margin-left: -5px;
+  }
+  /* line 618, ../sass/screen.scss */
+  html body #wrapper #vignettes .jcarousel ul li {
+    position: relative;
+    height: 170px;
+    /* 222px; */
+    width: 170px;
+    /* 222px; */
+    margin: 0 5px;
+    display: inline-block;
+    background-image: url('../../img/ui/fond-vignette.png?1431634484');
+  }
+  /* line 630, ../sass/screen.scss */
+  html body #wrapper .jcarousel-control-prev {
+    z-index: 999;
+    position: absolute;
+    display: block;
+    height: 75px;
+    width: 39px;
+    top: 47px;
+    left: 25px;
+    background-image: url('../../img/ui/gauche-droite-sprite.png?1431634485');
+    background-position: 0px 0px;
+    -webkit-animation: clignote 0.5s ease-in-out infinite alternate;
+    -moz-animation: clignote 0.5s ease-in-out infinite alternate;
+    -ms-animation: clignote 0.5s ease-in-out infinite alternate;
+    -o-animation: clignote 0.5s ease-in-out infinite alternate;
+    animation: clignote 0.5s ease-in-out infinite alternate;
+  }
+  /* line 642, ../sass/screen.scss */
+  html body #wrapper .jcarousel-control-prev:hover {
+    background-image: url('../../img/ui/gauche-droite-sprite.png?1431634485');
+    background-position: -39px 0px;
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -ms-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+    opacity: 1;
+  }
+  /* line 649, ../sass/screen.scss */
+  html body #wrapper .jcarousel-control-prev.invisible {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -ms-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+    opacity: 0;
+  }
+  /* line 655, ../sass/screen.scss */
+  html body #wrapper .jcarousel-control-next {
+    z-index: 999;
+    position: absolute;
+    display: block;
+    width: 39px;
+    height: 75px;
+    top: 47px;
+    right: 25px;
+    background-image: url('../../img/ui/gauche-droite-sprite.png?1431634485');
+    background-position: -78px 0px;
+    -webkit-animation: clignote 0.5s ease-in-out infinite alternate;
+    -moz-animation: clignote 0.5s ease-in-out infinite alternate;
+    -ms-animation: clignote 0.5s ease-in-out infinite alternate;
+    -o-animation: clignote 0.5s ease-in-out infinite alternate;
+    animation: clignote 0.5s ease-in-out infinite alternate;
+  }
+  /* line 667, ../sass/screen.scss */
+  html body #wrapper .jcarousel-control-next:hover {
+    background-image: url('../../img/ui/gauche-droite-sprite.png?1431634485');
+    background-position: -117px 0px;
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -ms-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+    opacity: 1;
+  }
+  /* line 674, ../sass/screen.scss */
+  html body #wrapper .jcarousel-control-next.invisible {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -ms-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+    opacity: 0;
+  }
+}
+/* line 681, ../sass/screen.scss */
+html body #wrapper #zoom {
+  height: 68px;
+  width: 240px;
+  margin: 0 auto;
+  padding: 0 10px;
+  background-repeat: no-repeat;
+}
+/* line 688, ../sass/screen.scss */
+html body #wrapper #zoom #plus {
+  display: inline-block;
+  height: 64px;
+  width: 110px;
+  background-repeat: no-repeat;
+  background-image: url('../../img/ui/zoom-sprite.png?1431634489');
+  background-position: 0px 0px;
+}
+/* line 696, ../sass/screen.scss */
+html body #wrapper #zoom #plus:hover {
+  background-image: url('../../img/ui/zoom-sprite.png?1431634489');
+  background-position: -110px 0px;
+}
+/* line 702, ../sass/screen.scss */
+html body #wrapper #zoom #moins {
+  display: inline-block;
+  height: 64px;
+  width: 110px;
+  background-repeat: no-repeat;
+  background-image: url('../../img/ui/zoom-sprite.png?1431634489');
+  background-position: -220px 0px;
+}
+/* line 710, ../sass/screen.scss */
+html body #wrapper #zoom #moins:hover {
+  background-image: url('../../img/ui/zoom-sprite.png?1431634489');
+  background-position: -330px 0px;
+}
+/* line 717, ../sass/screen.scss */
+html body #wrapper #retour {
+  display: block;
+  height: 63px;
+  width: 93px;
+  margin: 20px 10px;
+  background-image: url('../../img/ui/retour.png?1431634487');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* line 727, ../sass/screen.scss */
+html body #wrapper #aide {
+  display: block;
+  height: 63px;
+  width: 64px;
+  margin: 20px 10px;
+  background-repeat: no-repeat;
+  background-image: url('../../img/ui/aide-sprite.png?1431634480');
+  background-position: 0px 0px;
+}
+/* line 736, ../sass/screen.scss */
+html body #wrapper #aide:hover {
+  background-image: url('../../img/ui/aide-sprite.png?1431634480');
+  background-position: -64px 0px;
+}
+/* line 742, ../sass/screen.scss */
+html body #wrapper #son {
+  display: block;
+  height: 63px;
+  width: 64px;
+  margin: 20px 10px;
+  background-repeat: no-repeat;
+}
+/* line 749, ../sass/screen.scss */
+html body #wrapper #son.on {
+  background-image: url('../../img/ui/son-sprite.png?1431634487');
+  background-position: 0px 0px;
+}
+/* line 753, ../sass/screen.scss */
+html body #wrapper #son.on:hover {
+  background-image: url('../../img/ui/son-sprite.png?1431634487');
+  background-position: -64px 0px;
+}
+/* line 759, ../sass/screen.scss */
+html body #wrapper #son.off {
+  background-image: url('../../img/ui/son-sprite.png?1431634487');
+  background-position: -128px 0px;
+}
+/* line 763, ../sass/screen.scss */
+html body #wrapper #son.off:hover {
+  background-image: url('../../img/ui/son-sprite.png?1431634487');
+  background-position: -192px 0px;
+}

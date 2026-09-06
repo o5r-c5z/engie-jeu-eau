@@ -1,0 +1,140 @@
+function chargement()
+{
+    $('#jouer a').hide();
+
+    var fichiers = 0;
+
+    var queue = new createjs.LoadQueue();
+    queue.installPlugin(createjs.Sound);
+    queue.addEventListener('progress', handleProgress);
+    queue.addEventListener('complete', handleComplete);
+    
+    var manifest = [
+        { id: 'bienvenue', src: 'sounds/bienvenue.mp3', data: 1 },
+        { id: 'cycle-eau-bonne-reponse-1', src: 'sounds/cycle-eau/cycle-eau-bonne-reponse-1.mp3', data: 1 },
+        { id: 'cycle-eau-bonne-reponse-2', src: 'sounds/cycle-eau/cycle-eau-bonne-reponse-2.mp3', data: 1 },
+        { id: 'cycle-eau-bonne-reponse-3', src: 'sounds/cycle-eau/cycle-eau-bonne-reponse-3.mp3', data: 1 },
+        { id: 'cycle-eau-bonne-reponse-4', src: 'sounds/cycle-eau/cycle-eau-bonne-reponse-4.mp3', data: 1 },
+        { id: 'cycle-eau-bonne-reponse-5', src: 'sounds/cycle-eau/cycle-eau-bonne-reponse-5.mp3', data: 1 },
+        { id: 'cycle-eau-bonne-reponse-6', src: 'sounds/cycle-eau/cycle-eau-bonne-reponse-6.mp3', data: 1 },
+        { id: 'cycle-eau-bonne-reponse-7', src: 'sounds/cycle-eau/cycle-eau-bonne-reponse-7.mp3', data: 1 },
+        { id: 'cycle-eau-bonne-reponse-8', src: 'sounds/cycle-eau/cycle-eau-bonne-reponse-8.mp3', data: 1 },
+        { id: 'cycle-eau-bonne-reponse-9', src: 'sounds/cycle-eau/cycle-eau-bonne-reponse-9.mp3', data: 1 },
+        { id: 'cycle-eau-bonne-reponse-10', src: 'sounds/cycle-eau/cycle-eau-bonne-reponse-10.mp3', data: 1 },
+        { id: 'metiers-bonne-reponse-1', src: 'sounds/metiers/metiers-bonne-reponse-1.mp3', data: 1 },
+        { id: 'metiers-bonne-reponse-2', src: 'sounds/metiers/metiers-bonne-reponse-2.mp3', data: 1 },
+        { id: 'metiers-bonne-reponse-3', src: 'sounds/metiers/metiers-bonne-reponse-3.mp3', data: 1 },
+        { id: 'metiers-bonne-reponse-4', src: 'sounds/metiers/metiers-bonne-reponse-4.mp3', data: 1 },
+        { id: 'metiers-bonne-reponse-5', src: 'sounds/metiers/metiers-bonne-reponse-5.mp3', data: 1 },
+        { id: 'metiers-bonne-reponse-6', src: 'sounds/metiers/metiers-bonne-reponse-6.mp3', data: 1 },
+        { id: 'metiers-bonne-reponse-7', src: 'sounds/metiers/metiers-bonne-reponse-7.mp3', data: 1 },
+        { id: 'metiers-bonne-reponse-8', src: 'sounds/metiers/metiers-bonne-reponse-8.mp3', data: 1 },
+        { id: 'metiers-bonne-reponse-9', src: 'sounds/metiers/metiers-bonne-reponse-9.mp3', data: 1 },
+        { id: 'metiers-bonne-reponse-10', src: 'sounds/metiers/metiers-bonne-reponse-10.mp3', data: 1 },
+        { id: 'bons-gestes-bonne-reponse-1', src: 'sounds/bons-gestes/bons-gestes-bonne-reponse-1.mp3', data: 1 },
+        { id: 'bons-gestes-bonne-reponse-2', src: 'sounds/bons-gestes/bons-gestes-bonne-reponse-2.mp3', data: 1 },
+        { id: 'bons-gestes-bonne-reponse-3', src: 'sounds/bons-gestes/bons-gestes-bonne-reponse-3.mp3', data: 1 },
+        { id: 'bons-gestes-bonne-reponse-4', src: 'sounds/bons-gestes/bons-gestes-bonne-reponse-4.mp3', data: 1 },
+        { id: 'bons-gestes-bonne-reponse-5', src: 'sounds/bons-gestes/bons-gestes-bonne-reponse-5.mp3', data: 1 },
+        { id: 'bons-gestes-bonne-reponse-6', src: 'sounds/bons-gestes/bons-gestes-bonne-reponse-6.mp3', data: 1 },
+        { id: 'bons-gestes-bonne-reponse-7', src: 'sounds/bons-gestes/bons-gestes-bonne-reponse-7.mp3', data: 1 },
+        { id: 'bons-gestes-bonne-reponse-8', src: 'sounds/bons-gestes/bons-gestes-bonne-reponse-8.mp3', data: 1 },
+        { id: 'bons-gestes-bonne-reponse-9', src: 'sounds/bons-gestes/bons-gestes-bonne-reponse-9.mp3', data: 1 },
+        { id: 'bons-gestes-bonne-reponse-10', src: 'sounds/bons-gestes/bons-gestes-bonne-reponse-10.mp3', data: 1 },
+        { id: 'themes-1', src: 'sounds/themes-1-theme.mp3', data: 1 },
+        { id: 'themes-2', src: 'sounds/themes-2-themes.mp3', data: 1 },
+        { id: 'themes-3', src: 'sounds/themes-3-themes.mp3', data: 1 },
+        { id: 'felicitations', src: 'sounds/felicitations.mp3', data: 1 },
+        { id: 'mauvaise-reponse-1', src: 'sounds/mauvaises-reponses/mauvaise-reponse-1.mp3', data: 1 },
+        { id: 'mauvaise-reponse-2', src: 'sounds/mauvaises-reponses/mauvaise-reponse-2.mp3', data: 1 }
+    ];
+    
+    if (!ie9) {
+        manifest.push(
+            { id: 'mauvaise-reponse-3', src: 'sounds/mauvaises-reponses/mauvaise-reponse-3.mp3', data: 1 },
+            { id: 'mauvaise-reponse-4', src: 'sounds/mauvaises-reponses/mauvaise-reponse-4.mp3', data: 1 },
+            { id: 'mauvaise-reponse-5', src: 'sounds/mauvaises-reponses/mauvaise-reponse-5.mp3', data: 1 },
+            { id: 'mauvaise-reponse-6', src: 'sounds/mauvaises-reponses/mauvaise-reponse-6.mp3', data: 1 },
+            { id: 'mauvaise-reponse-7', src: 'sounds/mauvaises-reponses/mauvaise-reponse-7.mp3', data: 1 },
+            { id: 'mauvaise-reponse-8', src: 'sounds/mauvaises-reponses/mauvaise-reponse-8.mp3', data: 1 },
+            { id: 'mauvaise-reponse-9', src: 'sounds/mauvaises-reponses/mauvaise-reponse-9.mp3', data: 1 },
+            { id: 'mauvaise-reponse-10', src: 'sounds/mauvaises-reponses/mauvaise-reponse-10.mp3', data: 1 }
+        );
+    }
+    
+    if (tactile) {
+        manifest.push(
+            { id: 'cycle-eau-consigne-tablette', src: 'sounds/cycle-eau/cycle-eau-consigne-tablette.mp3', data: 1 },
+            { id: 'metiers-consigne-tablette', src: 'sounds/metiers/metiers-consigne-tablette.mp3', data: 1 },
+            { id: 'bons-gestes-consigne-tablette', src: 'sounds/bons-gestes/bons-gestes-consigne-tablette.mp3', data: 1 }
+        );
+    } else {
+        manifest.push(
+            { id: 'cycle-eau-consigne-pc', src: 'sounds/cycle-eau/cycle-eau-consigne-pc.mp3', data: 1 },
+            { id: 'metiers-consigne-pc', src: 'sounds/metiers/metiers-consigne-pc.mp3', data: 1 },
+            { id: 'bons-gestes-consigne-pc', src: 'sounds/bons-gestes/bons-gestes-consigne-pc.mp3', data: 1 }
+        );
+    }
+    
+    queue.loadManifest(manifest);
+}
+
+function handleProgress(event)
+{
+    var progress = Math.round(event.loaded * 100);
+    $('#fichiers').text(progress);
+}
+
+function handleComplete(event)
+{
+    $('#progression').animate({
+        opacity: 0
+    }, 250, function () {
+        $(this).hide(0, function () {
+            if (tactile) {
+                $('#jouer a').show(0, function () {
+                    $('#jouer').animate({
+                        opacity: 1
+                    }, 250, function () {
+
+                    });
+                });
+            } else {
+                changerPage();
+            }
+        });
+    });
+}
+
+$('#jouer a').click(function ()
+{
+    changerPage();
+
+    return false;
+});
+
+function changerPage() {
+    $('#wrapper').animate({
+        opacity: 0
+    }, 500, function () {
+        $('#chargement').appendTo('#pas-la');
+        $('#jouer a').hide();
+        $('#progression').html('Chargement… <span id="fichiers">0</span>&nbsp;%');
+        $('#progression').css('opacity', 1);
+        $('#progression').show();
+        
+        $('#wrapper').append($('#accueil')).animate({
+            opacity: 1
+        }, 500, function () {
+            if (!tactile) {
+                createjs.Sound.play('bienvenue');
+            }
+        });
+
+        accueil();
+    });
+
+    if (tactile) {
+        createjs.Sound.play('bienvenue');
+    }
+}

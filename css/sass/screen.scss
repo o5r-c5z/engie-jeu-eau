@@ -1,0 +1,771 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/css3";
+@import "animation";
+
+$break-sm: 768px;
+$break-md: 992px;
+$break-lg: 1200px;
+
+@include keyframes(clignote) {
+    0%   {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@include font-face(
+"SansaPro",
+font-files(
+"SansaPro/SansaPro-SemiBold.otf", opentype
+),
+"",
+700,
+bold
+);
+
+@include font-face(
+"Vectora",
+font-files(
+"Vectora/VectoraLTStd-Roman.otf", opentype
+),
+"",
+400,
+normal
+);
+
+@include font-face(
+"Vectora",
+font-files(
+"Vectora/VectoraLTStd-Bold.otf", opentype
+),
+"",
+700,
+bold
+);
+
+strong {
+    font-weight: bold;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'SansaPro', 'Vectora', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 40px;
+    color: #0bb3e0;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+#plateau {
+    width: 100%;
+    overflow: hidden;
+    border: solid 10px #09b3e0;
+
+    .illustration {
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        .emplacement {
+            position: absolute;
+            overflow: auto;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            .vignette {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}
+
+#cycle-eau {
+    #sous-titre {
+        @include background-image(image-url('cycle-eau/le-cycle-de-l-eau.png'));
+    }
+
+    #plateau {
+        border-color: #fdc400;
+
+        .illustration {
+            @include background-image(image-url('cycle-eau/cycle-eau-00.jpg'));
+        }
+    }
+
+    .vignette {
+        &.vignette01 {
+            @include background-image(image-url('cycle-eau/cycle-eau-01.jpg'));
+        }
+        &.vignette02 {
+            @include background-image(image-url('cycle-eau/cycle-eau-02.jpg'));
+        }
+        &.vignette03 {
+            @include background-image(image-url('cycle-eau/cycle-eau-03.jpg'));
+        }
+        &.vignette04 {
+            @include background-image(image-url('cycle-eau/cycle-eau-04.jpg'));
+        }
+        &.vignette05 {
+            @include background-image(image-url('cycle-eau/cycle-eau-05.jpg'));
+        }
+        &.vignette06 {
+            @include background-image(image-url('cycle-eau/cycle-eau-06.jpg'));
+        }
+        &.vignette07 {
+            @include background-image(image-url('cycle-eau/cycle-eau-07.jpg'));
+        }
+        &.vignette08 {
+            @include background-image(image-url('cycle-eau/cycle-eau-08.jpg'));
+        }
+        &.vignette09 {
+            @include background-image(image-url('cycle-eau/cycle-eau-09.jpg'));
+        }
+        &.vignette10 {
+            @include background-image(image-url('cycle-eau/cycle-eau-10.jpg'));
+        }
+    }
+
+    #zoom {
+        @include background-image(image-url('cycle-eau/zoom-fond.png'));
+    }
+}
+
+#bons-gestes {
+    #sous-titre {
+        @include background-image(image-url('bons-gestes/les-bons-gestes.png'));
+    }
+
+    #plateau {
+        border-color: #75b31f;
+
+        .illustration {
+            @include background-image(image-url('bons-gestes/bons-gestes-00.jpg'));
+        }
+    }
+
+    .vignette {
+        &.vignette01 {
+            @include background-image(image-url('bons-gestes/bons-gestes-01.jpg'));
+        }
+        &.vignette02 {
+            @include background-image(image-url('bons-gestes/bons-gestes-02.jpg'));
+        }
+        &.vignette03 {
+            @include background-image(image-url('bons-gestes/bons-gestes-03.jpg'));
+        }
+        &.vignette04 {
+            @include background-image(image-url('bons-gestes/bons-gestes-04.jpg'));
+        }
+        &.vignette05 {
+            @include background-image(image-url('bons-gestes/bons-gestes-05.jpg'));
+        }
+        &.vignette06 {
+            @include background-image(image-url('bons-gestes/bons-gestes-06.jpg'));
+        }
+        &.vignette07 {
+            @include background-image(image-url('bons-gestes/bons-gestes-07.jpg'));
+        }
+        &.vignette08 {
+            @include background-image(image-url('bons-gestes/bons-gestes-08.jpg'));
+        }
+        &.vignette09 {
+            @include background-image(image-url('bons-gestes/bons-gestes-09.jpg'));
+        }
+        &.vignette10 {
+            @include background-image(image-url('bons-gestes/bons-gestes-10.jpg'));
+        }
+    }
+
+    #zoom {
+        @include background-image(image-url('bons-gestes/zoom-fond.png'));
+    }
+}
+
+#metiers {
+    #sous-titre {
+        @include background-image(image-url('metiers/les-metiers-autour-de-l-eau.png'));
+    }
+
+    #plateau {
+        border-color: #65c5dd;
+
+        .illustration {
+            @include background-image(image-url('metiers/metiers-00.jpg'));
+        }
+    }
+
+    .vignette {
+        &.vignette01 {
+            @include background-image(image-url('metiers/metiers-01.jpg'));
+        }
+        &.vignette02 {
+            @include background-image(image-url('metiers/metiers-02.jpg'));
+        }
+        &.vignette03 {
+            @include background-image(image-url('metiers/metiers-03.jpg'));
+        }
+        &.vignette04 {
+            @include background-image(image-url('metiers/metiers-04.jpg'));
+        }
+        &.vignette05 {
+            @include background-image(image-url('metiers/metiers-05.jpg'));
+        }
+        &.vignette06 {
+            @include background-image(image-url('metiers/metiers-06.jpg'));
+        }
+        &.vignette07 {
+            @include background-image(image-url('metiers/metiers-07.jpg'));
+        }
+        &.vignette08 {
+            @include background-image(image-url('metiers/metiers-08.jpg'));
+        }
+        &.vignette09 {
+            @include background-image(image-url('metiers/metiers-09.jpg'));
+        }
+        &.vignette10 {
+            @include background-image(image-url('metiers/metiers-10.jpg'));
+        }
+    }
+
+    #zoom {
+        @include background-image(image-url('metiers/zoom-fond.png'));
+    }
+}
+
+.suivant {
+    display: block;
+    height: 100px;
+    width: 130px;
+    @include background-image(image-url('ui/suivant.png'));
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#modal-bravo {
+    .modal-conteneur {
+        height: 262px;
+        width: 650px;
+        @include background-image(image-url('ui/bravo.png'));
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 80px 50px 25px 150px;
+    }
+}
+
+#modal-faux {
+    .modal-conteneur {
+        height: 211px;
+        width: 650px;
+        @include background-image(image-url('ui/faux.png'));
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 60px 50px 25px 125px;
+    }
+}
+
+#modal-aide {
+    .modal-conteneur {
+        height: 257px;
+        width: 650px;
+        @include background-image(image-url('ui/aide.png'));
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 50px 100px 25px 150px;
+    }
+}
+
+html 
+{
+    height: 100%;
+
+    body {
+        height: 100%;
+        margin: 0;
+        background-color: #c8e9f8;
+        @include background-image(image-url('ui/degrade.jpg'));
+        background-repeat: repeat-x;
+        backgroud-size: cover;
+        background-attachment: fixed;
+        font-family: 'Vectora', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+        /*********** PRELOAD ***********/
+        &:after{
+            display:none;
+            content: image-url('accueil/accueil-fond.jpg')
+                image-url('accueil/accueil.png')
+                image-url('accueil/themes-sprite.png')
+                image-url('accueil/telecharger-sprite.png')
+                image-url('accueil/titre.png')
+                image-url('bons-gestes/bons-gestes-00.jpg')
+                image-url('bons-gestes/bons-gestes-01.jpg')
+                image-url('bons-gestes/bons-gestes-02.jpg')
+                image-url('bons-gestes/bons-gestes-03.jpg')
+                image-url('bons-gestes/bons-gestes-04.jpg')
+                image-url('bons-gestes/bons-gestes-05.jpg')
+                image-url('bons-gestes/bons-gestes-06.jpg')
+                image-url('bons-gestes/bons-gestes-07.jpg')
+                image-url('bons-gestes/bons-gestes-08.jpg')
+                image-url('bons-gestes/bons-gestes-09.jpg')
+                image-url('bons-gestes/bons-gestes-10.jpg')
+                image-url('bons-gestes/les-bons-gestes.png')
+                image-url('bons-gestes/zoom-fond.png')
+                image-url('cycle-eau/cycle-eau-00.jpg')
+                image-url('cycle-eau/cycle-eau-01.jpg')
+                image-url('cycle-eau/cycle-eau-02.jpg')
+                image-url('cycle-eau/cycle-eau-03.jpg')
+                image-url('cycle-eau/cycle-eau-04.jpg')
+                image-url('cycle-eau/cycle-eau-05.jpg')
+                image-url('cycle-eau/cycle-eau-06.jpg')
+                image-url('cycle-eau/cycle-eau-07.jpg')
+                image-url('cycle-eau/cycle-eau-08.jpg')
+                image-url('cycle-eau/cycle-eau-09.jpg')
+                image-url('cycle-eau/cycle-eau-10.jpg')
+                image-url('cycle-eau/le-cycle-de-l-eau.png')
+                image-url('cycle-eau/zoom-fond.png')
+                image-url('metiers/metiers-00.jpg')
+                image-url('metiers/metiers-01.jpg')
+                image-url('metiers/metiers-02.jpg')
+                image-url('metiers/metiers-03.jpg')
+                image-url('metiers/metiers-04.jpg')
+                image-url('metiers/metiers-05.jpg')
+                image-url('metiers/metiers-06.jpg')
+                image-url('metiers/metiers-07.jpg')
+                image-url('metiers/metiers-08.jpg')
+                image-url('metiers/metiers-09.jpg')
+                image-url('metiers/metiers-10.jpg')
+                image-url('metiers/les-metiers-autour-de-l-eau.png')
+                image-url('metiers/zoom-fond.png')
+                image-url('ui/aide-sprite.png')
+                image-url('ui/aide.png')
+                image-url('ui/haut-bas-sprite.png')
+                image-url('ui/gauche-droite-sprite.png')
+                image-url('ui/zoom-sprite.png')
+                image-url('ui/son-sprite.png')
+                image-url('ui/retour.png')
+                image-url('ui/suivant.png')
+                image-url('ui/bravo.png')
+                image-url('ui/faux.png')
+                image-url('ui/fond-vignette.png')
+                image-url('ui/le-jeu-de-l-eau.png');
+        }
+
+        #pas-la {
+            display: none;
+        }
+
+        #wrapper {
+            height: 100%;
+            margin: 0;
+
+            #non-compatible {
+                margin-top: 100px;
+                text-align: center;
+                font-family: 'SansaPro', 'Vectora', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+                font-size: 20px;
+                color: #0bb3e0;
+            }
+            
+            #chargement {
+                #progression {
+                    margin-top: 200px;
+                    text-align: center;
+                    font-family: 'SansaPro', 'Vectora', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+                    font-size: 40px;
+                    color: #0bb3e0;
+                }
+
+                #jouer {
+                    margin-top: 200px;
+                    text-align: center;
+                    font-family: 'SansaPro', 'Vectora', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+                    font-size: 40px;
+                    color: #0bb3e0;
+                    opacity: 0;
+
+                    a {
+                        text-decoration: none;
+
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+
+            #accueil {
+                min-height: 100%;
+                margin: 0;
+                @include background-image(image-url('accueil/accueil-fond.jpg'));
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+
+                #accueil-titre {
+                    height: 164px;
+                    width: 690px;
+                    margin: 0 auto;
+                    @include background-image(image-url('accueil/titre.png'));
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+
+                .accueil-message {
+                    height: 235px;
+                    width: 650px;
+                    margin: 0 auto;
+                    padding: 50px 150px 25px;
+                    @include background-image(image-url('accueil/accueil.png'));
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+
+                #bienvenue {
+                    position: relative;
+                }
+
+                #felicitations {
+                    position: relative;
+
+                    #telecharger-diplome {
+                        display: block;
+                        height: 159px;
+                        width: 524px;
+                        margin: 0 auto;
+                        background-repeat: no-repeat;
+                        @include background-image(image-url('accueil/telecharger-sprite.png'));
+                        background-position: 0px 0px;
+
+                        &:hover {
+                            @include background-image(image-url('accueil/telecharger-sprite.png'));
+                            background-position: -524px 0px;
+                        }
+                    }
+                }
+
+                #themes {
+                    position: relative;
+
+                    .theme {
+                        display:block;
+                        height: 290px;
+                        width: 259px;
+                        margin: 0 auto;
+                        background-repeat: no-repeat;
+                    }
+
+                    #theme-cycle-eau {
+                        @include background-image(image-url('accueil/themes-sprite.png'));
+                        background-position: 0px 0px;
+
+                        &:hover {
+                            @include background-image(image-url('accueil/themes-sprite.png'));
+                            background-position: -259px 0px;
+                        }
+                    }
+
+                    #theme-bons-gestes {
+                        @include background-image(image-url('accueil/themes-sprite.png'));
+                        background-position: -518px 0px;
+
+                        &:hover {
+                            @include background-image(image-url('accueil/themes-sprite.png'));
+                            background-position: -777px 0px;
+                        }
+                    }
+
+                    #theme-metiers {
+                        @include background-image(image-url('accueil/themes-sprite.png'));
+                        background-position: -1036px 0px;
+
+                        &:hover {
+                            @include background-image(image-url('accueil/themes-sprite.png'));
+                            background-position: -1295px 0px;
+                        }
+                    }
+                }
+            }
+
+            .jeu {
+                .vignette {
+                    height: 170px; /* 222px; */
+                    width: 170px; /* 222px; */
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+
+                #jeu-titre {
+                    height: 169px;
+
+                    #titre {
+                        height: 100%;
+                        width: 50%;
+                        background-position: left center;
+                        background-size: 75%;
+                        background-repeat: no-repeat;
+                        @include background-image(image-url('ui/le-jeu-de-l-eau.png'));
+                    }
+
+                    #sous-titre {
+                        height: 100%;
+                        width: 50%;
+                        background-position: right center;
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+
+            @media screen and (min-width: $break-md) {
+                #vignettes {
+                    width: 170px; /* 222px; */
+                    margin: 0 auto;
+                    overflow: hidden;
+
+                    .jcarousel {
+                        height: 350px;
+                        width: 170px; /* 222px; */
+
+                        ul {
+                            position: relative;
+                            overflow-y: hidden;
+
+                            li {
+                                position: relative;
+                                height: 170px; /* 222px; */
+                                width: 170px; /* 222px; */
+                                margin: 0 0 10px;
+                                @include background-image(image-url('ui/fond-vignette.png'));
+                            }
+                        }
+                    }
+                }
+
+                .jcarousel-control-prev {
+                    z-index: 999;
+                    display: block;
+                    height: 39px;
+                    width: 75px;
+                    margin: 0 auto 10px;
+                    @include background-image(image-url('ui/haut-bas-sprite.png'));
+                    background-position: 0px 0px;
+                    @include animation(clignote 0.5s ease-in-out infinite alternate);
+
+                    &:hover {
+                        @include background-image(image-url('ui/haut-bas-sprite.png'));
+                        background-position: -75px 0px;
+                        @include animation-play-state(paused);
+                        opacity: 1;
+                    }
+
+                    &.invisible {
+                        @include animation-play-state(paused);
+                        opacity: 0;
+                    }
+                }
+
+                .jcarousel-control-next {
+                    z-index: 999;
+                    display: block;
+                    height: 39px;
+                    width: 75px;
+                    margin: 10px auto 0;
+                    @include background-image(image-url('ui/haut-bas-sprite.png'));
+                    background-position: -150px 0px;
+                    @include animation(clignote 0.5s ease-in-out infinite alternate);
+
+                    &:hover {
+                        @include background-image(image-url('ui/haut-bas-sprite.png'));
+                        background-position: -225px 0px;
+                        @include animation-play-state(paused);
+                        opacity: 1;
+                    }
+
+                    &.invisible {
+                        @include animation-play-state(paused);
+                        opacity: 0;
+                    }
+                }
+            }
+            @media screen and (max-width: $break-md) {
+                #vignettes {
+                    position: relative;
+                    height: 170px; /* 222px; */
+                    width: 100%;
+                    margin-bottom: 10px;
+
+                    .jcarousel {
+                        margin: 0 auto;
+                        position: relative;
+                        overflow: hidden;
+
+                        ul {
+                            position: relative;
+                            width: 30000em;
+                            padding-left: 0;
+                            list-style: none;
+                            margin-left: -5px;
+
+                            li {
+                                position: relative;
+                                height: 170px; /* 222px; */
+                                width: 170px; /* 222px; */
+                                margin: 0 5px;
+                                display: inline-block;
+                                @include background-image(image-url('ui/fond-vignette.png'));
+                            }
+                        }
+                    }
+                }
+
+                .jcarousel-control-prev {
+                    z-index: 999;
+                    position: absolute;
+                    display: block;
+                    height: 75px;
+                    width: 39px;
+                    top: 47px;
+                    left: 25px;
+                    @include background-image(image-url('ui/gauche-droite-sprite.png'));
+                    background-position: 0px 0px;
+                    @include animation(clignote 0.5s ease-in-out infinite alternate);
+
+                    &:hover {
+                        @include background-image(image-url('ui/gauche-droite-sprite.png'));
+                        background-position: -39px 0px;
+                        @include animation-play-state(paused);
+                        opacity: 1;
+                    }
+
+                    &.invisible {
+                        @include animation-play-state(paused);
+                        opacity: 0;
+                    }
+                }
+
+                .jcarousel-control-next {
+                    z-index: 999;
+                    position: absolute;
+                    display: block;
+                    width: 39px;
+                    height: 75px;
+                    top: 47px;
+                    right: 25px;
+                    @include background-image(image-url('ui/gauche-droite-sprite.png'));
+                    background-position: -78px 0px;
+                    @include animation(clignote 0.5s ease-in-out infinite alternate);
+
+                    &:hover {
+                        @include background-image(image-url('ui/gauche-droite-sprite.png'));
+                        background-position: -117px 0px;
+                        @include animation-play-state(paused);
+                        opacity: 1;
+                    }
+
+                    &.invisible {
+                        @include animation-play-state(paused);
+                        opacity: 0;
+                    }
+                }
+            }
+
+            #zoom {
+                height: 68px;
+                width: 240px;
+                margin: 0 auto;
+                padding: 0 10px;
+                background-repeat: no-repeat;
+
+                #plus {
+                    display: inline-block;
+                    height: 64px;
+                    width: 110px;
+                    background-repeat: no-repeat;
+                    @include background-image(image-url('ui/zoom-sprite.png'));
+                    background-position: 0px 0px;
+
+                    &:hover {
+                        @include background-image(image-url('ui/zoom-sprite.png'));
+                        background-position: -110px 0px;
+                    }
+                }
+
+                #moins {
+                    display: inline-block;
+                    height: 64px;
+                    width: 110px;
+                    background-repeat: no-repeat;
+                    @include background-image(image-url('ui/zoom-sprite.png'));
+                    background-position: -220px 0px;
+
+                    &:hover {
+                        @include background-image(image-url('ui/zoom-sprite.png'));
+                        background-position: -330px 0px;
+                    }
+                }
+            }
+
+            #retour {
+                display: block;
+                height: 63px;
+                width: 93px;
+                margin: 20px 10px;
+                @include background-image(image-url('ui/retour.png'));
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            #aide {
+                display: block;
+                height: 63px;
+                width: 64px;
+                margin: 20px 10px;
+                background-repeat: no-repeat;
+                @include background-image(image-url('ui/aide-sprite.png'));
+                background-position: 0px 0px;
+
+                &:hover {
+                    @include background-image(image-url('ui/aide-sprite.png'));
+                    background-position: -64px 0px;
+                }
+            }
+
+            #son {
+                display: block;
+                height: 63px;
+                width: 64px;
+                margin: 20px 10px;
+                background-repeat: no-repeat;
+
+                &.on {
+                    @include background-image(image-url('ui/son-sprite.png'));
+                    background-position: 0px 0px;
+
+                    &:hover {
+                        @include background-image(image-url('ui/son-sprite.png'));
+                        background-position: -64px 0px;
+                    }
+                }
+
+                &.off {
+                    @include background-image(image-url('ui/son-sprite.png'));
+                    background-position: -128px 0px;
+
+                    &:hover {
+                        @include background-image(image-url('ui/son-sprite.png'));
+                        background-position: -192px 0px;
+                    }
+                }
+            }
+        }
+    }
+}
